@@ -1,0 +1,630 @@
+--rev's gui2lua | @revisionedd
+
+local player = game:GetService("Players").LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = playerGui
+ScreenGui.Name = "ScreenGui"
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local KEY = Instance.new("Frame")
+KEY.Parent = ScreenGui
+KEY.LayoutOrder = 0
+KEY.Active = false
+KEY.Interactable = true
+KEY.AnchorPoint = Vector2.new(0, 0)
+KEY.Rotation = 0
+KEY.AutomaticSize = Enum.AutomaticSize.None
+KEY.Name = "KEY"
+KEY.BorderMode = Enum.BorderMode.Outline
+KEY.SizeConstraint = Enum.SizeConstraint.RelativeXY
+KEY.ZIndex = 1
+KEY.BorderSizePixel = 0
+KEY.Visible = true
+KEY.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+KEY.BackgroundTransparency = 0.20000000298023224
+KEY.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KEY.Position = UDim2.new(0.303964763879776, 0, 0.2066957801580429, 0)
+KEY.Size = UDim2.new(0, 534, 0, 402)
+
+local UICorner = Instance.new("UICorner")
+UICorner.Parent = KEY
+UICorner.Name = "UICorner"
+UICorner.CornerRadius = UDim.new(0, 12)
+
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Parent = KEY
+UIStroke.Name = "UIStroke"
+UIStroke.ZIndex = 1
+UIStroke.Color = Color3.fromRGB(212, 255, 244)
+UIStroke.Thickness = 3
+
+local UIStroke2 = Instance.new("UIStroke")
+UIStroke2.Parent = KEY
+UIStroke2.Name = "UIStroke"
+UIStroke2.ZIndex = 1
+UIStroke2.BorderOffset = UDim.new(0, 1)
+UIStroke2.Color = Color3.fromRGB(36, 43, 41)
+UIStroke2.Thickness = 6
+
+local VerifyButton = Instance.new("TextButton")
+VerifyButton.Parent = KEY
+VerifyButton.LayoutOrder = 0
+VerifyButton.Active = true
+VerifyButton.Interactable = true
+VerifyButton.AnchorPoint = Vector2.new(0, 0)
+VerifyButton.Rotation = 0
+VerifyButton.AutomaticSize = Enum.AutomaticSize.None
+VerifyButton.Name = "VerifyButton"
+VerifyButton.BorderMode = Enum.BorderMode.Outline
+VerifyButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
+VerifyButton.ZIndex = 1
+VerifyButton.BorderSizePixel = 0
+VerifyButton.Visible = true
+VerifyButton.BackgroundColor3 = Color3.fromRGB(212, 255, 244)
+VerifyButton.BackgroundTransparency = 0.10000000149011612
+VerifyButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VerifyButton.Position = UDim2.new(0.49685394763946533, 0, 0.5869652032852173, 0)
+VerifyButton.Size = UDim2.new(0, 250, 0, 66)
+VerifyButton.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
+VerifyButton.Text = "Redmeem Key"
+VerifyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+VerifyButton.TextSize = 20
+VerifyButton.TextStrokeColor3 = Color3.fromRGB(212, 255, 244)
+
+local UICorner2 = Instance.new("UICorner")
+UICorner2.Parent = VerifyButton
+UICorner2.Name = "UICorner"
+
+local na = Instance.new("TextLabel")
+na.Parent = KEY
+na.LayoutOrder = 0
+na.Active = false
+na.Interactable = true
+na.AnchorPoint = Vector2.new(0, 0)
+na.Rotation = 0
+na.AutomaticSize = Enum.AutomaticSize.None
+na.Name = "na"
+na.BorderMode = Enum.BorderMode.Outline
+na.SizeConstraint = Enum.SizeConstraint.RelativeXY
+na.ZIndex = 1
+na.BorderSizePixel = 0
+na.Visible = true
+na.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+na.BackgroundTransparency = 123
+na.BorderColor3 = Color3.fromRGB(0, 0, 0)
+na.Position = UDim2.new(0.31210875511169434, 0, 0.20895522832870483, 0)
+na.Size = UDim2.new(0, 200, 0, 50)
+na.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
+na.RichText = true
+na.Text = "IKGHUB"
+na.TextColor3 = Color3.fromRGB(255, 255, 255)
+na.TextSize = 25
+na.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+na.TextWrapped = true
+
+local imagendeelhub = Instance.new("ImageLabel")
+imagendeelhub.Parent = KEY
+imagendeelhub.LayoutOrder = 0
+imagendeelhub.Active = false
+imagendeelhub.Interactable = true
+imagendeelhub.AnchorPoint = Vector2.new(0, 0)
+imagendeelhub.Rotation = 0
+imagendeelhub.AutomaticSize = Enum.AutomaticSize.None
+imagendeelhub.Name = "imagendeelhub"
+imagendeelhub.BorderMode = Enum.BorderMode.Outline
+imagendeelhub.SizeConstraint = Enum.SizeConstraint.RelativeXY
+imagendeelhub.ZIndex = 1
+imagendeelhub.BorderSizePixel = 0
+imagendeelhub.Visible = true
+imagendeelhub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+imagendeelhub.BackgroundTransparency = 123
+imagendeelhub.BorderColor3 = Color3.fromRGB(0, 0, 0)
+imagendeelhub.Position = UDim2.new(0.42340990900993347, 0, 0.05472636967897415, 0)
+imagendeelhub.Size = UDim2.new(0, 81, 0, 78)
+imagendeelhub.Image = "rbxassetid://92186739587440"
+
+local UICorner3 = Instance.new("UICorner")
+UICorner3.Parent = imagendeelhub
+UICorner3.Name = "UICorner"
+UICorner3.CornerRadius = UDim.new(0, 123)
+
+local key = Instance.new("TextButton")
+key.Parent = KEY
+key.LayoutOrder = 0
+key.Active = true
+key.Interactable = true
+key.AnchorPoint = Vector2.new(0, 0)
+key.Rotation = 0
+key.AutomaticSize = Enum.AutomaticSize.None
+key.Name = "key"
+key.BorderMode = Enum.BorderMode.Outline
+key.SizeConstraint = Enum.SizeConstraint.RelativeXY
+key.ZIndex = 1
+key.BorderSizePixel = 0
+key.Visible = true
+key.BackgroundColor3 = Color3.fromRGB(50, 47, 35)
+key.BackgroundTransparency = 0.10000000149011612
+key.BorderColor3 = Color3.fromRGB(0, 0, 0)
+key.Position = UDim2.new(0.07572062313556671, 0, 0.5869652032852173, 0)
+key.Size = UDim2.new(0, 206, 0, 66)
+key.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
+key.RichText = true
+key.Text = "Get Key"
+key.TextColor3 = Color3.fromRGB(212, 255, 244)
+key.TextSize = 20
+key.TextStrokeColor3 = Color3.fromRGB(213, 255, 242)
+key.TextWrapped = true
+
+local UICorner4 = Instance.new("UICorner")
+UICorner4.Parent = key
+UICorner4.Name = "UICorner"
+
+local ImageLabel = Instance.new("ImageLabel")
+ImageLabel.Parent = key
+ImageLabel.LayoutOrder = 0
+ImageLabel.Active = false
+ImageLabel.Interactable = true
+ImageLabel.AnchorPoint = Vector2.new(0, 0)
+ImageLabel.Rotation = 0
+ImageLabel.AutomaticSize = Enum.AutomaticSize.None
+ImageLabel.Name = "ImageLabel"
+ImageLabel.BorderMode = Enum.BorderMode.Outline
+ImageLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ImageLabel.ZIndex = 1
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Visible = true
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 123
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.Position = UDim2.new(0.2750000059604645, 0, 0.39393940567970276, 0)
+ImageLabel.Size = UDim2.new(0, 15, 0, 15)
+ImageLabel.Image = "rbxassetid://117047144730308"
+ImageLabel.ImageColor3 = Color3.fromRGB(212, 255, 244)
+
+local UICorner5 = Instance.new("UICorner")
+UICorner5.Parent = ImageLabel
+UICorner5.Name = "UICorner"
+UICorner5.CornerRadius = UDim.new(0, 1231)
+
+local ImageLabel2 = Instance.new("ImageLabel")
+ImageLabel2.Parent = key
+ImageLabel2.LayoutOrder = 0
+ImageLabel2.Active = false
+ImageLabel2.Interactable = true
+ImageLabel2.AnchorPoint = Vector2.new(0, 0)
+ImageLabel2.Rotation = 0
+ImageLabel2.AutomaticSize = Enum.AutomaticSize.None
+ImageLabel2.Name = "ImageLabel"
+ImageLabel2.BorderMode = Enum.BorderMode.Outline
+ImageLabel2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ImageLabel2.ZIndex = 1
+ImageLabel2.BorderSizePixel = 0
+ImageLabel2.Visible = true
+ImageLabel2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel2.BackgroundTransparency = 123
+ImageLabel2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel2.Position = UDim2.new(1.3457280397415161, 0, 0.39393940567970276, 0)
+ImageLabel2.Size = UDim2.new(0, 16, 0, 15)
+ImageLabel2.Image = "rbxassetid://9338693770"
+
+local UICorner6 = Instance.new("UICorner")
+UICorner6.Parent = ImageLabel2
+UICorner6.Name = "UICorner"
+UICorner6.CornerRadius = UDim.new(0, 1231)
+
+local Enter_your_key__ = Instance.new("TextBox")
+Enter_your_key__.Parent = KEY
+Enter_your_key__.LayoutOrder = 0
+Enter_your_key__.Active = true
+Enter_your_key__.Interactable = true
+Enter_your_key__.AnchorPoint = Vector2.new(0, 0)
+Enter_your_key__.Rotation = 0
+Enter_your_key__.AutomaticSize = Enum.AutomaticSize.None
+Enter_your_key__.Name = "Enter your key.."
+Enter_your_key__.BorderMode = Enum.BorderMode.Outline
+Enter_your_key__.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Enter_your_key__.ZIndex = 1
+Enter_your_key__.BorderSizePixel = 0
+Enter_your_key__.Visible = true
+Enter_your_key__.BackgroundColor3 = Color3.fromRGB(50, 47, 35)
+Enter_your_key__.BackgroundTransparency = 0.5
+Enter_your_key__.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Enter_your_key__.CursorPosition = -1
+Enter_your_key__.Position = UDim2.new(0.07572062313556671, 0, 0.3731343150138855, 0)
+Enter_your_key__.Size = UDim2.new(0, 474, 0, 67)
+Enter_your_key__.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
+Enter_your_key__.RichText = true
+Enter_your_key__.Text = "Enter your key.."
+Enter_your_key__.TextColor3 = Color3.fromRGB(255, 255, 255)
+Enter_your_key__.TextSize = 25
+Enter_your_key__.TextWrapped = true
+Enter_your_key__.TextXAlignment = Enum.TextXAlignment.Left
+
+local UICorner7 = Instance.new("UICorner")
+UICorner7.Parent = Enter_your_key__
+UICorner7.Name = "UICorner"
+
+local Cerrar = Instance.new("ImageButton")
+Cerrar.Parent = KEY
+Cerrar.LayoutOrder = 0
+Cerrar.Active = true
+Cerrar.Interactable = true
+Cerrar.AnchorPoint = Vector2.new(0, 0)
+Cerrar.Rotation = 0
+Cerrar.AutomaticSize = Enum.AutomaticSize.None
+Cerrar.Name = "Cerrar"
+Cerrar.BorderMode = Enum.BorderMode.Outline
+Cerrar.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Cerrar.ZIndex = 1
+Cerrar.BorderSizePixel = 0
+Cerrar.Visible = true
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Parent = KEY
+TextLabel.LayoutOrder = 0
+TextLabel.Active = false
+TextLabel.Interactable = true
+TextLabel.AnchorPoint = Vector2.new(0, 0)
+TextLabel.Rotation = 0
+TextLabel.AutomaticSize = Enum.AutomaticSize.None
+TextLabel.Name = "TextLabel"
+TextLabel.BorderMode = Enum.BorderMode.Outline
+TextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TextLabel.ZIndex = 1
+TextLabel.BorderSizePixel = 0
+TextLabel.Visible = true
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 123
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Position = UDim2.new(0.32147204875946045, 0, 0.30099502205848694, 0)
+TextLabel.Size = UDim2.new(0, 190, 0, 22)
+TextLabel.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
+TextLabel.RichText = true
+TextLabel.Text = "Enter your key to unlock the hub."
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 15
+TextLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextWrapped = true
+
+local cargando = Instance.new("ImageLabel")
+cargando.Parent = KEY
+cargando.LayoutOrder = 0
+cargando.Active = false
+cargando.Interactable = true
+cargando.AnchorPoint = Vector2.new(0, 0)
+cargando.Rotation = 0
+cargando.AutomaticSize = Enum.AutomaticSize.None
+cargando.Name = "cargando"
+cargando.BorderMode = Enum.BorderMode.Outline
+cargando.SizeConstraint = Enum.SizeConstraint.RelativeXY
+cargando.ZIndex = 1
+cargando.BorderSizePixel = 0
+cargando.Visible = true
+cargando.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cargando.BackgroundTransparency = 123
+cargando.BorderColor3 = Color3.fromRGB(0, 0, 0)
+cargando.Position = UDim2.new(0.2848331332206726, 0, 0.30845770239830017, 0)
+cargando.Size = UDim2.new(0, 14, 0, 16)
+cargando.Image = "rbxassetid://17119858971"
+
+local UICorner8 = Instance.new("UICorner")
+UICorner8.Parent = cargando
+UICorner8.Name = "UICorner"
+UICorner8.CornerRadius = UDim.new(0, 123)
+
+local Discordinv = Instance.new("ImageButton")
+Discordinv.Parent = KEY
+Discordinv.LayoutOrder = 0
+Discordinv.Active = true
+Discordinv.Interactable = true
+Discordinv.AnchorPoint = Vector2.new(0, 0)
+Discordinv.Rotation = 0
+Discordinv.AutomaticSize = Enum.AutomaticSize.None
+Discordinv.Name = "Discordinv"
+Discordinv.BorderMode = Enum.BorderMode.Outline
+Discordinv.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Discordinv.ZIndex = 1
+Discordinv.BorderSizePixel = 0
+Discordinv.Visible = true
+
+local UICorner9 = Instance.new("UICorner")
+UICorner9.Parent = Discordinv
+UICorner9.Name = "UICorner"
+
+local Scriptsbtn = Instance.new("ImageButton")
+Scriptsbtn.Parent = KEY
+Scriptsbtn.LayoutOrder = 0
+Scriptsbtn.Active = true
+Scriptsbtn.Interactable = true
+Scriptsbtn.AnchorPoint = Vector2.new(0, 0)
+Scriptsbtn.Rotation = 0
+Scriptsbtn.AutomaticSize = Enum.AutomaticSize.None
+Scriptsbtn.Name = "Scriptsbtn"
+Scriptsbtn.BorderMode = Enum.BorderMode.Outline
+Scriptsbtn.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Scriptsbtn.ZIndex = 1
+Scriptsbtn.BorderSizePixel = 0
+Scriptsbtn.Visible = true
+
+local UICorner10 = Instance.new("UICorner")
+UICorner10.Parent = Scriptsbtn
+UICorner10.Name = "UICorner"
+
+local Scripts = Instance.new("Frame")
+Scripts.Parent = KEY
+Scripts.LayoutOrder = 0
+Scripts.Active = false
+Scripts.Interactable = true
+Scripts.AnchorPoint = Vector2.new(0, 0)
+Scripts.Rotation = 0
+Scripts.AutomaticSize = Enum.AutomaticSize.None
+Scripts.Name = "Scripts"
+Scripts.BorderMode = Enum.BorderMode.Outline
+Scripts.SizeConstraint = Enum.SizeConstraint.RelativeXY
+Scripts.ZIndex = 1
+Scripts.BorderSizePixel = 0
+Scripts.Visible = false
+Scripts.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Scripts.BackgroundTransparency = 0.20000000298023224
+Scripts.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Scripts.Position = UDim2.new(-0.5103862881660461, 0, 0.06965173780918121, 0)
+Scripts.Size = UDim2.new(0, 256, 0, 350)
+
+local TextLabel2 = Instance.new("TextLabel")
+TextLabel2.Parent = Scripts
+TextLabel2.LayoutOrder = 0
+TextLabel2.Active = false
+TextLabel2.Interactable = true
+TextLabel2.AnchorPoint = Vector2.new(0, 0)
+TextLabel2.Rotation = 0
+TextLabel2.AutomaticSize = Enum.AutomaticSize.None
+TextLabel2.Name = "TextLabel"
+TextLabel2.BorderMode = Enum.BorderMode.Outline
+TextLabel2.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TextLabel2.ZIndex = 1
+TextLabel2.BorderSizePixel = 0
+TextLabel2.Visible = true
+TextLabel2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel2.BackgroundTransparency = 123
+TextLabel2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel2.Position = UDim2.new(0.12615954875946045, 0, 0.09528075903654099, 0)
+TextLabel2.Size = UDim2.new(0, 190, 0, 22)
+TextLabel2.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
+TextLabel2.RichText = true
+TextLabel2.Text = "Scripts:"
+TextLabel2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel2.TextSize = 15
+TextLabel2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel2.TextWrapped = true
+
+local UICorner11 = Instance.new("UICorner")
+UICorner11.Parent = Scripts
+UICorner11.Name = "UICorner"
+UICorner11.CornerRadius = UDim.new(0, 12)
+
+local TextLabel3 = Instance.new("TextLabel")
+TextLabel3.Parent = Scripts
+TextLabel3.LayoutOrder = 0
+TextLabel3.Active = false
+TextLabel3.Interactable = true
+TextLabel3.AnchorPoint = Vector2.new(0, 0)
+TextLabel3.Rotation = 0
+TextLabel3.AutomaticSize = Enum.AutomaticSize.None
+TextLabel3.Name = "TextLabel"
+TextLabel3.BorderMode = Enum.BorderMode.Outline
+TextLabel3.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TextLabel3.ZIndex = 1
+TextLabel3.BorderSizePixel = 0
+TextLabel3.Visible = true
+TextLabel3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel3.BackgroundTransparency = 123
+TextLabel3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel3.Position = UDim2.new(0.12615954875946045, 0, -0.019004952162504196, 0)
+TextLabel3.Size = UDim2.new(0, 190, 0, 258)
+TextLabel3.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json")
+TextLabel3.RichText = true
+TextLabel3.Text = "・⚡ Updated Scripts\
+・🎯 Auras and Abilities\
+・🏃 Movement Scripts\
+・💥 Unlimited Money\
+・🛠️ Exclusive Tools\
+・🔥 New Scripts Added Constantly\
+・📚 Organized Script Library"
+TextLabel3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel3.TextSize = 15
+TextLabel3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel3.TextWrapped = true
+
+local _fakemodules = {}
+
+local req = require
+local require = function(obj)
+	local fake = _fakemodules[obj]
+	if fake then
+		return fake()
+	end
+	return req(obj)
+end
+
+local function LocalScript2_fakescript() -- key.LocalScript
+	local script = Instance.new("LocalScript", key)
+	script.Name = "LocalScript"
+	local button = script.Parent
+	local link = "https://sites.google.com/view/key-sistemf/página-principal
+	button.MouseButton1Click:Connect(function()
+		setclipboard(link)
+		button.Text = "¡Link Copied!"
+		button.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+		task.wait(1.5)
+		button.Text = "Get key"  -- Cambia esto por tu texto original
+		button.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- color original
+	end)
+end
+task.spawn(LocalScript2_fakescript)
+local function LocalScript4_fakescript() -- Enter_your_key__.LocalScript
+	local script = Instance.new("LocalScript", Enter_your_key__)
+	script.Name = "LocalScript"
+	-- // LocalScript - Key System + Carga del HUB con Animación
+	-- Colócalo en StarterPlayer > StarterPlayerScripts
+	local TweenService = game:GetService("TweenService")
+	local keyFrame = script.Parent.Parent -- Frame de la Key (el que se llama KEY)
+	local hubFrame = keyFrame.Parent:WaitForChild("IKGHUB") -- Frame del Hub
+	local keyBox = keyFrame:WaitForChild("KeyBox")
+	local verifyButton = keyFrame:WaitForChild("VerifyButton")
+	local statusLabel = keyFrame:FindFirstChild("StatusLabel")
+	print("Key System con Animación Activado")
+	-- Función para cerrar el KEY Frame con animación
+	local function cerrarKeyFrame()
+		local tweenInfo = TweenInfo.new(0.6, Enum.EasingStyle.Back, Enum.EasingDirection.In)
+		local tween = TweenService:Create(keyFrame, tweenInfo, {
+			Size = UDim2.new(0.1, 0, 0.1, 0),
+			BackgroundTransparency = 1,
+		})
+		tween:Play()
+		tween.Completed:Connect(function()
+			keyFrame.Visible = false
+			keyFrame.Size = UDim2.new(0.5, 0, 0.6, 0) -- Vuelve al tamaño original para la próxima vez
+			keyFrame.BackgroundTransparency = 0
+		end)
+	end
+	-- Función para verificar la key
+	local function verifyKey()
+		local key = keyBox.Text
+		if key:find("KEY%-FREE%-") then
+			print("✅ Key aceptada!")
+			if statusLabel then
+				statusLabel.Text = "✅ Key correcta! Cargando HUB..."
+				statusLabel.TextColor3 = Color3.fromRGB(80, 255, 80)
+			end
+			task.wait(1)
+			-- Cerrar con animación
+			cerrarKeyFrame()
+			task.wait(0.7)
+			-- Mostrar el HUB
+			hubFrame.Visible = true
+			-- === CARGAR EL HUB ===
+			print("Cargando HUB.lua...")
+			local success, err = pcall(function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/ikgmonxr/Speed/refs/heads/main/HUB.lua"))()
+			end)
+			if success then
+				print("✅ HUB cargado correctamente!")
+			else
+				warn("❌ Error al cargar el HUB: " .. tostring(err))
+				if statusLabel then
+					statusLabel.Text = "❌ Error al cargar el HUB"
+					statusLabel.TextColor3 = Color3.fromRGB(255, 80, 80)
+				end
+			end
+		else
+			print("❌ Key inválida")
+			if statusLabel then
+				statusLabel.Text = "❌ La key debe contener KEY-FREE-"
+				statusLabel.TextColor3 = Color3.fromRGB(255, 80, 80)
+			end
+		end
+	end
+	-- Botón Verificar
+	verifyButton.MouseButton1Click:Connect(verifyKey)
+	-- Presionar Enter en el TextBox
+	keyBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			verifyKey()
+		end
+	end)
+	print("✅ Key System + Animación listo")
+end
+task.spawn(LocalScript4_fakescript)
+local function LocalScript6_fakescript() -- Cerrar.LocalScript
+	local script = Instance.new("LocalScript", Cerrar)
+	script.Name = "LocalScript"
+	local TweenService = game:GetService("TweenService")
+	local button = script.Parent
+	local frame = button.Parent
+	button.MouseButton1Click:Connect(function()
+		-- Animación de cierre
+		local tween = TweenService:Create(
+			frame,
+			TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.In),
+			{
+				Size = UDim2.new(0, 0, 0, 0),
+				BackgroundTransparency = 1
+			}
+		)
+		tween:Play()
+		tween.Completed:Connect(function()
+			frame.Visible = false
+			-- Restaurar para cuando se vuelva a abrir
+			frame.Size = UDim2.new(0.5, 0, 0.5, 0)
+			frame.BackgroundTransparency = 0
+		end)
+	end)
+end
+task.spawn(LocalScript6_fakescript)
+local function LocalScript8_fakescript() -- Discordinv.LocalScript
+	local script = Instance.new("LocalScript", Discordinv)
+	script.Name = "LocalScript"
+	local button = script.Parent
+	local link = "https://discord.gg/DWyDS8pE8C"
+	button.MouseButton1Click:Connect(function()
+		setclipboard(link)
+		button.Text = "✅ Link Copiado!"
+		button.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+		task.wait(1.5)
+		button.Text = "Unirse al Discord"  -- Cambia esto por tu texto original
+		button.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- color original
+	end)
+end
+task.spawn(LocalScript8_fakescript)
+local function LocalScript10_fakescript() -- Scriptsbtn.LocalScript
+	local script = Instance.new("LocalScript", Scriptsbtn)
+	script.Name = "LocalScript"
+	local TweenService = game:GetService("TweenService")
+	local button = script.Parent
+	local frame = button.Parent:WaitForChild("Scripts")
+	-- Posición del Frame
+	local originalPosition = frame.Position
+	-- Tamaño final del Frame
+	local originalSize = frame.Size
+	-- Configuración de la animación
+	local tweenInfo = TweenInfo.new(
+		0.4, -- Duración
+		Enum.EasingStyle.Quint,
+		Enum.EasingDirection.Out
+	)
+	-- Al inicio, ocultamos el Frame
+	frame.Visible = false
+	frame.Size = UDim2.new(0, 0, 0, 0)
+	button.MouseButton1Click:Connect(function()
+		if frame.Visible == false then
+			-- Abrir Frame
+			frame.Visible = true
+			frame.Size = UDim2.new(0, 0, 0, 0)
+			local openTween = TweenService:Create(
+				frame,
+				tweenInfo,
+				{
+					Size = originalSize
+				}
+			)
+			openTween:Play()
+		else
+			-- Cerrar Frame
+			local closeTween = TweenService:Create(
+				frame,
+				tweenInfo,
+				{
+					Size = UDim2.new(0, 0, 0, 0)
+				}
+			)
+			closeTween:Play()
+			closeTween.Completed:Connect(function()
+				frame.Visible = false
+				frame.Size = originalSize
+			end)
+		end
+	end)
+end
+task.spawn(LocalScript10_fakescript)
